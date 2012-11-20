@@ -13,7 +13,7 @@ def compact(filein):
 		prev = input1.getPage(i-1)
 		currTxt = curr.extractText()[:-3]
 		prevTxt = prev.extractText()[:-3]
-		if currTxt.find(prevTxt) == 0: # substring
+		if currTxt.find(prevTxt) == 0: # prevTxt is prefix of currTxt
 			pass # the current page is an extension to the previous one -> continue
 		else:
 			output.addPage(prev) # current page is something new -> save latest old one
@@ -27,7 +27,7 @@ def compact(filein):
 	n2 = output.getNumPages()
 	print "%s has %s pages." % (filein, n)
 	print "%s has %s pages." % (fileout, n2)
-	print "-> removed %s pages" % (n-n2)
+	print "-> removed %s pages\n" % (n-n2)
 
 
 if len(sys.argv) < 2:
