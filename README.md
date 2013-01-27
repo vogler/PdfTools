@@ -1,14 +1,15 @@
 PdfTools
 ========
 
+### Usage
+
+Install [pyPdf](http://pybrary.net/pyPdf/).
+
+
 compactify.py
 -------------
 
 Compacts the input pdfs for printing by removing superflous animated pages.
-
-### Usage
-
-Install [pyPdf](http://pybrary.net/pyPdf/).
 
 Usage:
 
@@ -27,3 +28,14 @@ Example:
     lecture2.pdf has 81 pages.
     lecture2-compact.pdf has 38 pages.
     -> removed 43 pages
+
+
+crop.py
+-------------
+
+Extracts slides from pdfs with multiple slides per page...
+Position and dimension of slides on page are defined in the code.
+
+Usage:
+
+    python crop.py <inputfile(s)>
